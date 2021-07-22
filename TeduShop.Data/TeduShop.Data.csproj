@@ -54,11 +54,18 @@
     <Compile Include="Infrastrusture\Dbfactory.cs" />
     <Compile Include="Infrastrusture\Disposable.cs" />
     <Compile Include="Infrastrusture\IDbfactory.cs" />
-    <Compile Include="Infrastrusture\IRepositories.cs" />
+    <Compile Include="Infrastrusture\IRepository.cs" />
     <Compile Include="Infrastrusture\IUnitofwork.cs" />
     <Compile Include="Infrastrusture\RepositoryBase.cs" />
     <Compile Include="Infrastrusture\UnitOfWork.cs" />
+    <Compile Include="Migrations\202107220757462_InitialDB.cs" />
+    <Compile Include="Migrations\202107220757462_InitialDB.designer.cs">
+      <DependentUpon>202107220757462_InitialDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ProductCategoryRepository.cs" />
+    <Compile Include="Repositories\ProductRepository.cs" />
     <Compile Include="TeduShopDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -76,7 +83,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Repositories\" />
+    <EmbeddedResource Include="Migrations\202107220757462_InitialDB.resx">
+      <DependentUpon>202107220757462_InitialDB.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

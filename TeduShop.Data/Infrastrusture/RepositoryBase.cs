@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace TeduShop.Data.Infrastrusture
 {
-    public abstract class RepositoryBase<T>  : IRepositories<T> where T : class
+    public abstract class RepositoryBase<T>  : IRepository<T> where T : class
     {
         #region Preperties
         private TeduShopDbContext dataContext;

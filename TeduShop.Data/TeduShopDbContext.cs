@@ -20,7 +20,8 @@ namespace TeduShop.Data
         public DbSet<HOSOXINVIEC> HOSOXINVIEC { set; get; }
         public DbSet<NHANVIEN> NHANVIEN { set; get; }
         public DbSet<PHONGBAN> PHONGBAN { set; get; }
-        
+        public IEnumerable<object> ProductCategoryRepository { get; internal set; }
+
         protected override void OnModelCreating(DbModelBuilder builder)
         {
 
