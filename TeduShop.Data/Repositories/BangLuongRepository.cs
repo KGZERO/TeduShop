@@ -8,15 +8,16 @@ using TeduShop.Model.Model;
 
 namespace TeduShop.Data.Repositories
 {
-    public interface IProductRepository
+
+    public interface IBangLuongRepository
     {
 
     }
-    public class ProductRepository : RepositoryBase<NHANVIEN>, IProductRepository
+    public  class BangLuongRepository : RepositoryBase<BANGLUONGCT>, IBangLuongRepository
     {
-        public ProductRepository(IDbfactory dbfactory) : base(dbfactory)
+        public BangLuongRepository(IDbfactory dbfactory) : base(dbfactory)
         {
-             
+
         }
     }
 }

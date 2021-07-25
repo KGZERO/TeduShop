@@ -27,5 +27,6 @@ namespace TeduShop.Model.Model
        public string GhiChu { set; get; }
 
         public virtual IEnumerable<NHANVIEN> NHANVIEN { set; get; }
+        
     }
 }

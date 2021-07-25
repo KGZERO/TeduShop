@@ -14,16 +14,16 @@ namespace TeduShop.Data.Repositories
     {
         IEnumerable<NHANVIEN> GetByAlias(string alias);
     }
-    public class ProductCategoryRepository : RepositoryBase<NHANVIEN>,IProductCategoryRepository
+    public class ProductCategoryRepositoryNV : RepositoryBase<NHANVIEN>,IProductCategoryRepository
     {
-        public ProductCategoryRepository(IDbfactory dbfactory) : base(dbfactory)
+        public ProductCategoryRepositoryNV(IDbfactory dbfactory) : base(dbfactory)
         {
 
         }
 
         public IEnumerable<NHANVIEN> GetByAlias(string HoTenNV)
         {
-            return this.DbContext.NHANVIEN.Where(x => x.HoTenNV == HoTenNV);
+            return this.DbContext.NHANVIEN.Where(x => x.HoTenNV == HoTenNV);    
         }
     }
 }
